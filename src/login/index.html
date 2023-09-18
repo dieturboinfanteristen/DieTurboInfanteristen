@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webleb</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="display:flex; align-items:center; justify-content:center;">
+<div class="login-page">
+  <div class="form">
+    <form class="login-form" method="post" id="login-form">
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" id="username" required />
+      <input type="password" placeholder="Password" id="password" required/>
+      <a type="button" class="btn" onclick="loginUser()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Sign in
+      </a>
+    </form>
+  </div>
+</div>
+<script>
+  function loginUser() {
+    // Benutzername und Passwort aus den Eingabefeldern abrufen
+    var usernameInput = document.getElementById('username').value;
+    var passwordInput = document.getElementById('password').value;
+
+    // Benutzerdaten überprüfen
+    if (usernameInput === 'owner' && passwordInput === 'owner') {
+      window.location.href = '404/';
+      alert('Anmeldung erfolgreich!');
+    } else {
+      alert('Falscher Benutzername oder Passwort. Bitte versuchen Sie es erneut.');
+    }
+  }
+</script>
+</body>
+</html>

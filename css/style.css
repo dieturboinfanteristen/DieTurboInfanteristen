@@ -1,0 +1,124 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+body {
+  background: #0a0517;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  font-size: 10px; /* Smaller font size */
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.brandBtn {
+  background: linear-gradient(180deg, #896efd 0, #6b4afc 100%);
+  height: 30px; /* Smaller height */
+  width: 100%;
+  font-weight: 500; /* Slightly smaller font weight */
+  font-size: 12px; /* Smaller font size */
+  line-height: 15px; /* Smaller line height */
+  text-align: center;
+  color: #efeff1;
+  border-radius: 6px; /* Smaller border radius */
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Smaller gap between text and icon */
+  text-decoration: none;
+}
+
+.brandBtn:hover {
+  background: linear-gradient(180deg, #6b4afc 0, #563bca 100%);
+}
+
+.brandBtn i {
+  font-size: 20px; /* Hier die gewünschte Größe eintragen */
+}
+
+
+.waitlistForm {
+  box-shadow: 0 0 4px #e595ff, 0 0 24px rgba(130, 26, 250, 0.5); /* Smaller box-shadow */
+  display: flex;
+  flex-flow: row;
+  place-content: center;
+  align-items: center;
+  padding: 2px; /* Smaller padding */
+  background-color: rgba(161, 138, 255, 0.16); /* Smaller background opacity */
+  border-radius: 8px;
+  margin: 5px auto 12px; /* Smaller margin */
+  width: 135px; /* Smaller width */
+  height: 35px; /* Smaller height */
+  position: absolute;
+  top: 5px; /* Adjust top to your desired distance from the top */
+  right: 5px; /* Adjust right to your desired distance from the right */
+}
+
+.row {
+  position: relative;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.row i {
+  font-size: 22px; /* Hier die gewünschte kleinere Größe eintragen */
+  margin-top: 900px; /* Verschiebung um 20px nach unten */
+  margin-bottom: 15px; /* Verschiebung um 5px nach oben, um Platz für die Linie zu schaffen */
+}
+
+.horizontal-line {
+  position: absolute;
+  top: 885px; /* Verschiebung um 895px nach unten, über die Symbole */
+  left: 0;
+  width: 100%;
+  height: 1px; /* Dicke der Linie */
+  background-color: #afa5a5; /* Farbe der Linie */
+  z-index: 9; /* Einen niedrigeren z-index, um die Linie über den Icons anzuzeigen */
+}
+
+i {
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.55);
+  transition: all cubic-bezier(0.455, 0.03, 0.515, 0.955) 700ms;
+}
+
+#fb:hover {
+  color: #006fff;
+  text-shadow: 0 0 30px #006fff;
+}
+
+#ig:hover {
+  color: #ff3783;
+  text-shadow: 0 0 30px #ff3783;
+}
+
+#tw:hover {
+  color: #00acff;
+  text-shadow: 0 0 30px #00acff;
+}
+
+.glass-card {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30em;
+  height: 15em;
+  position: absolute;
+}
