@@ -1,24 +1,22 @@
-/* Media-Query für kleinere Bildschirme (z. B. Mobile) */
 @media screen and (max-width: 768px) {
   
   /* Icons in der .row zentrieren und mehr Platz lassen */
   .row {
-    position: relative; /* Verwenden Sie relative Positionierung */
-    top: 10%; /* Verwenden Sie Prozentsätze für den Abstand von oben */
-    right: 0;
-    left: 5%; /* Verwenden Sie Prozentsätze für den linken Abstand */
-    justify-content: center;
-    gap: 5%; /* Verwenden Sie Prozentsätze für den Abstand zwischen den Icons */
+      position: fixed;
+      top: 300px; /* Erhöhen Sie den Abstand von oben nach Bedarf */
+      right: 0;
+      left: 305px;
+      justify-content: center;
+      gap: 30px; /* Erhöhen Sie den Abstand zwischen den Icons nach Bedarf */
   }
 
   /* Horizontale Linie zentrieren und weiter unten positionieren */
   .horizontal-line {
-    position: relative; /* Verwenden Sie relative Positionierung */
-    top: 50%; /* Verwenden Sie Prozentsätze für den Abstand von oben */
+    top: 975px; /* Erhöhen Sie den Abstand nach Bedarf */
     transform: translateY(-50%);
     right: 0; /* Linie erstreckt sich bis zum rechten Rand */
     left: 0; /* Linie erstreckt sich bis zum linken Rand */
-    width: 90%; /* Verwenden Sie Prozentsätze für die Breite */
+    width: 520px; /* Linie erstreckt sich über die gesamte Breite */
   }
 
   /* brandBtn oben rechts anzeigen und fixieren */
