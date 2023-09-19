@@ -2,13 +2,13 @@
   
   /* Icons in der .row zentrieren und mehr Platz lassen */
   .row {
-    position: fixed;
-    top: 300px; /* Erhöhen Sie den Abstand von oben nach Bedarf */
-    right: 0;
-    left: 310px;
-    justify-content: center;
-    gap: 30px; /* Erhöhen Sie den Abstand zwischen den Icons nach Bedarf */
-}
+      position: fixed;
+      top: 300px; /* Erhöhen Sie den Abstand von oben nach Bedarf */
+      right: 0;
+      left: 310px;
+      justify-content: center;
+      gap: 30px; /* Erhöhen Sie den Abstand zwischen den Icons nach Bedarf */
+  }
 
   /* Horizontale Linie zentrieren und weiter unten positionieren */
   .horizontal-line {
