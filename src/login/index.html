@@ -6,38 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webleb</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome 5 (Standard Version) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .show-icon {
+            cursor: pointer;
+        }
+
+        .hide-icon {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body style="display:flex; align-items:center; justify-content:center;">
-<div class="login-page">
-  <div class="form">
-    <form class="login-form" method="post" id="login-form">
-      <h2>Login</h2>
-      <input type="text" placeholder="Username" id="username" required />
-      <input type="password" placeholder="Password" id="password" required/>
-      <a type="button" class="btn" onclick="loginUser()">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Sign in
-      </a>
-    </form>
-  </div>
-</div>
-<script>
-  function loginUser() {
-    // Benutzername und Passwort aus den Eingabefeldern abrufen
-    var usernameInput = document.getElementById('username').value;
-    var passwordInput = document.getElementById('password').value;
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form" method="post" id="login-form">
+                <h2>Login</h2>
+                <input type="text" placeholder="Username" id="username" required />
+                <div style="position: relative;">
+                    <input type="password" placeholder="Password" id="password" required />
+                    <i class="fas fa-eye-slash hide-icon" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);" onclick="togglePasswordVisibility()"></i>
+                    <i class="fas fa-eye show-icon" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); display: none;" onclick="togglePasswordVisibility()"></i>
+                </div>
+                <a type="button" class="btn" onclick="loginUser()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Sign in
+                </a>
+            </form>
+        </div>
+    </div>
+    <script>
+        // Function to handle login when the "Sign in" button is clicked
+        function loginUser() {
+            // Get the username and password input values
+            var usernameInput = document.getElementById('username').value;
+            var passwordInput = document.getElementById('password').value;
 
-    // Benutzerdaten überprüfen
-    if (usernameInput === 'owner' && passwordInput === 'owner') {
-      window.location.href = '404/';
-      alert('Anmeldung erfolgreich!');
-    } else {
-      alert('Falscher Benutzername oder Passwort. Bitte versuchen Sie es erneut.');
-    }
-  }
-</script>
+            // Check user credentials
+            if (usernameInput === 'owner' && passwordInput === 'owner') {
+                window.location.href = '404/';
+                alert('Login successful!');
+            } else {
+                alert('Incorrect username or password. Please try again.');
+            }
+        }
+
+        // Function to toggle password visibility
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById('password');
+            var showIcon = document.querySelector('.show-icon');
+            var hideIcon = document.querySelector('.hide-icon');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                hideIcon.style.display = 'none';
+                showIcon.style.display = 'initial';
+            } else {
+                passwordInput.type = 'password';
+                showIcon.style.display = 'none';
+                hideIcon.style.display = 'initial';
+            }
+        }
+    </script>
 </body>
 </html>

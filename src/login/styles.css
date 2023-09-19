@@ -161,3 +161,10 @@ h2{
     bottom: 100%;
   }
 }
+
+i {
+  margin-top: -15px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  transition: all cubic-bezier(0.455, 0.03, 0.515, 0.955) 700ms;
+}
