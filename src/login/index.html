@@ -6,17 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Include Font Awesome 5 (Standard Version) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        .show-icon {
-            cursor: pointer;
-        }
-
-        .hide-icon {
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body style="display:flex; align-items:center; justify-content:center;">
     <div class="login-page">
@@ -26,6 +16,8 @@
                 <input type="text" placeholder="Username" id="username" required />
                 <div style="position: relative;">
                     <input type="password" placeholder="Password" id="password" required />
+                    <div id="password-error" style="color: #ff0000; display: none;">Falsches Passwort. Bitte versuche es erneut.</div>
+                    <div id="success-message" style="color: #00ff00; display: none;">erfolgreich Angemeldet!</div>
                     <i class="fas fa-eye-slash hide-icon" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);" onclick="togglePasswordVisibility()"></i>
                     <i class="fas fa-eye show-icon" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); display: none;" onclick="togglePasswordVisibility()"></i>
                 </div>
@@ -39,38 +31,7 @@
             </form>
         </div>
     </div>
-    <script>
-        // Function to handle login when the "Sign in" button is clicked
-        function loginUser() {
-            // Get the username and password input values
-            var usernameInput = document.getElementById('username').value;
-            var passwordInput = document.getElementById('password').value;
 
-            // Check user credentials
-            if (usernameInput === 'owner' && passwordInput === 'owner') {
-                window.location.href = '404/';
-                alert('Login successful!');
-            } else {
-                alert('Incorrect username or password. Please try again.');
-            }
-        }
-
-        // Function to toggle password visibility
-        function togglePasswordVisibility() {
-            var passwordInput = document.getElementById('password');
-            var showIcon = document.querySelector('.show-icon');
-            var hideIcon = document.querySelector('.hide-icon');
-
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                hideIcon.style.display = 'none';
-                showIcon.style.display = 'initial';
-            } else {
-                passwordInput.type = 'password';
-                showIcon.style.display = 'none';
-                hideIcon.style.display = 'initial';
-            }
-        }
-    </script>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>
