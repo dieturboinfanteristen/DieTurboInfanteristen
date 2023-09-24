@@ -1,0 +1,85 @@
+/* Media Query for a maximum screen width of 945px */
+@media (max-width: 945px) {
+    
+    /* Style for the navigation */
+    .nav {
+        width: 70px;
+        max-inline-size: 64px;
+        padding: 10px;
+        border-radius: 0;
+        height: auto;
+        max-width: 70px;
+        overflow: hidden;
+        transition: width 0.3s;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    /* Hide the normal navigation items initially */
+    .nav .nav-item {
+        display: none;
+    }
+
+    /* Style for the gray overlay when the hamburger menu is open */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(128, 128, 128, 0.5);
+    }
+
+    /* Style for the gray window when the hamburger menu is open */
+    .nav.open {
+        width: auto;
+        min-width: 500px;
+        height: auto;
+        min-height: 500px;
+        background-color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .nav.open .nav-item {
+        display: block;
+    }
+    
+    /* Style for the X symbol when the hamburger menu is open */
+    .nav.open .close-button {
+        display: block;
+    }
+
+    /* Style for the hamburger icon (fas fa-bars) in the top-right corner */
+    .nav .fa-bars {
+        color: black; /* Change the color to black */
+        font-size: 30px; /* Adjust the icon size as needed */
+        margin: 0 auto; /* Center the icon horizontally */
+        display: inline;
+    }
+
+    .nav.open .fa-bars {
+        display: none;
+    }
+
+    .nav .fa-times {
+        display: none;
+    }
+
+    /* Style for the X symbol (fa-times) in the top-right corner */
+    .nav.open .fa-times {
+        display: inline-block;
+        color: black; /* Change the color to black */
+        font-size: 20px; /* Adjust the icon size as needed */
+        background-color: rgba(219, 45, 45, 0.459); /* Set the background color to light red */
+        border-radius: 100%; /* Add border radius for a circular shape */
+        padding: 10px; /* Add padding to the icon */
+        position: absolute; /* Position the icon absolutely within the nav container */
+        top: 0px; /* Adjust the top position to place it above the navigation */
+        right: 0px; /* Adjust the right position to place it above the navigation */
+    }
+}
