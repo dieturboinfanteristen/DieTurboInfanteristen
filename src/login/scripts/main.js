@@ -11,23 +11,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Definieren Sie eine Liste von Benutzerdaten
     const users = [
-      { username: "owner", password: "owner" },
-      { username: "jendrigo", password: "jendrigo" },
-      { username: "leon", password: "leon" }
-      // Fügen Sie weitere Benutzer hinzu, falls erforderlich
+      { username: "Max", password: "Max" },
+      { username: "Leon", password: "Leon" },
+      { username: "Jendrigo", password: "Jendrigo" }
     ];
 
     // Überprüfen Sie, ob die eingegebenen Benutzerdaten in der Liste vorhanden sind
     const user = users.find(user => user.username === username && user.password === password);
 
     if (user) {
-      window.location.href = "#eingeloggt"; // Hier die Weiterleitungs-URL angeben
+      // Benutzer erfolgreich eingeloggt, speichern Sie den Benutzernamen im Local Storage
+      localStorage.setItem("loggedInUsername", username);
+
+      // Weiterleiten zur eingeloggt.html-Seite
+      window.location.href = "wil/eingeloggt.html";
     } else {
       alert("Falscher Benutzername oder falsches Passwort");
     }
   });
 });
-
 
 $('.message a').click(function(){
     $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
